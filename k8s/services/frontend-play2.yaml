@@ -1,0 +1,17 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "play-app-service"
+  namespace: "default"
+  labels:
+    app: "play-app"
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 9000
+  selector:
+    app: "play-app"
+  type: "LoadBalancer"
+  loadBalancerIP: ""

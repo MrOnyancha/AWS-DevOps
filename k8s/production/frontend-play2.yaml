@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "play-app"
+  namespace: "default"
+  labels:
+    app: "play-app"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "play-app"
+  template:
+    metadata:
+      labels:
+        app: "play-app"
+    spec:
+      containers:
+        - name: "play2-sha256-1"
+          image: "gcr.io/kubernets-271416/20th-play@sha256:ee84f03aa4d4b63a7fecd592a836e98a14bdd684da324061b604f2d84a487576"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "play-app-hpa-5fng"
+  namespace: "default"
+  labels:
+    app: "play-app"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "play-app"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - type: "Resource"
+      resource:
+        name: "cpu"
+        targetAverageUtilization: 80

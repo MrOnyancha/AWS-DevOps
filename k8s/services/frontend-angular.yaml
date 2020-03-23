@@ -1,0 +1,17 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "angular-frontend-service"
+  namespace: "default"
+  labels:
+    app: "angular-frontend"
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 90
+      targetPort: 80
+  selector:
+    app: "angular-frontend"
+  type: "LoadBalancer"
+  loadBalancerIP: ""
