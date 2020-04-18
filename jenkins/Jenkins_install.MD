@@ -61,7 +61,7 @@ First access the bash as a root user
 - Grab the default password 
   #Paste the path below to see the password
 - Password Location:`/var/lib/jenkins/secrets/initialAdminPassword`
-  #At times you need to run this 
+- At times you need to run this 
   `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 - `Skip` Plugin Installation; _We can do it later_
 - Change admin password
