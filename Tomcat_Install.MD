@@ -1,29 +1,22 @@
-# Tomcat installation on EC2 instance
+# Tomcat installation on the Second EC2 instance
 
 ### Pre-requisites
 1. EC2 instance with Java v1.8.x 
 
-### Install Apache Tomcat
+### Install Apache Tomcat (use 8.5.x) 
 1. Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance
    ```sh 
    # Create tomcat directory
    cd /opt
-   wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+   wget http://mirror.ucu.ac.ug/apache/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz
    tar -xvzf /opt/apache-tomcat-8.5.35.tar.gz
    ```
-1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
+1. navigate into ./bin, startup.sh to start server
    ```sh
-   chmod +x /opt/apache-tomcat-8.5.35/bin/startup.sh 
-   shutdown.sh
+   cd /opt/apache-tomcat-8.5.35/bin/startup.sh 
+   ./startup.sh
    ```
-
-1. create link files for tomcat startup.sh and shutdown.sh 
-   ```sh
-   ln -s /opt/apache-tomcat-8.5.35/bin/startup.sh /usr/local/bin/tomcatup
-   ln -s /opt/apache-tomcat-8.5.35/bin/shutdown.sh /usr/local/bin/tomcatdown
-   tomcatup
-   ```
-  #### Check point :
+  #### View the Server :
 access tomcat application from browser on port 8080  
  - http://<Public_IP>:8080
 
@@ -35,7 +28,7 @@ access tomcat application from browser on port 8080
 tomcatdown
 tomcatup
 ```
-#### Check point :
+#### View the Server :
 Access tomcat application from browser on port 8090  
  - http://<Public_IP>:8090
 
