@@ -3,7 +3,8 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 
 - Ensure you have a Jenkins server installed in the EC2 
 - access the bash as a root user 
-```sudo su -
+```sh
+sudo su -
 ```
 
 #### Install Maven 
