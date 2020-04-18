@@ -2,7 +2,7 @@
 AWS DevOps Project: CI/CD with Git, Jenkins, Ansible, Docker to Kubernetes 
 
 ### Purpose:
-By following this repository you can able to setup a DevOps CI/CD Pipeline using
+The following tools collaborate to setup a DevOps CI/CD Pipeline:
 
 - git
 - Jenkins
