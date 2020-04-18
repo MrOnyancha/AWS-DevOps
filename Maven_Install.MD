@@ -7,7 +7,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
 sudo su -
 ```
 
-#### Install Maven 
+#### Install Maven & Add to PATH
 1. Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. 
 cd /opt/maven as the installation directory
  - Link : https://maven.apache.org/download.cgi
@@ -30,7 +30,7 @@ We arledy have Java added in the same file
    PATH=<Existing_PATH>:$M2_HOME:$M2
    ```
 #### Check: 
-1. logoff and login as root user to check maven version
+3. logoff and login as root user to check maven version
   
     ```sh
     mvn --version
@@ -38,9 +38,9 @@ We arledy have Java added in the same file
 So far we have completed the installation of maven software to support maven plugin on the jenkins console. Let's jump onto Jenkins to complete the remaining steps. 
 
 ### Setup maven on Jenkins console
-3. Install maven plugin without restart  
+4. Install maven plugin without restart  
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Invoker`
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Integration`
 
-4. Configure maven path
+5. Configure maven path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
