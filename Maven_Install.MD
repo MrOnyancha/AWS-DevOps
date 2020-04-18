@@ -21,7 +21,7 @@ cd /opt/maven as the installation directory
      tar -xvzf apache-maven-3.6.1-bin.tar.gz
      ```
 	
-1. Setup M2_HOME and M2 paths in .bash_profile also add these to the path variable
+2. Setup M2_HOME and M2 paths in .bash_profile also add these to the path variable
 We arledy have Java added in the same file
    ```sh
    vi ~/.bash_profile
@@ -38,9 +38,9 @@ We arledy have Java added in the same file
 So far we have completed the installation of maven software to support maven plugin on the jenkins console. Let's jump onto Jenkins to complete the remaining steps. 
 
 ### Setup maven on Jenkins console
-1. Install maven plugin without restart  
+3. Install maven plugin without restart  
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Invoker`
   - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Integration`
 
-2. Configure maven path
+4. Configure maven path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
