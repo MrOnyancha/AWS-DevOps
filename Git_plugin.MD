@@ -1,12 +1,14 @@
 # Configure Git pulgin on Jenkins
 Git is one of the most popular tools for version control system. you can pull code from git repositories using jenkins if you use github plugin. 
 
+The plugin is added Jenkins server installed on EC2  
 
-#### Prerequisites
-1. Jenkins server 
-
-#### Install Git on Jenkins server
-1. Install git packages on jenkins server
+#### Install Git
+1. First access the bash as a root user
+   ```sh
+   sudo su -
+   ```
+2. Install git packages on jenkin server
    ```sh
    yum install git -y
    ```
