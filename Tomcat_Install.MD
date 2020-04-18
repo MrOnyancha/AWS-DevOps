@@ -20,19 +20,11 @@
 access tomcat application from browser on port 8080  
  - http://<Public_IP>:8080
 
-  Using unique ports for each application is a best practice in an environment. But tomcat and Jenkins runs on ports number 8080. Hence lets change tomcat port number to 8090. Change port number in conf/server.xml file under tomcat home
-   ```sh
- cd /opt/apache-tomcat-8.5.35/conf
-# update port number in the "connecter port" field in server.xml
-# restart tomcat after configuration update
-tomcatdown
-tomcatup
-```
-#### View the Server :
-Access tomcat application from browser on port 8090  
- - http://<Public_IP>:8090
+  Using unique ports for each application is a best practice in an environment. 
+  But tomcat and Jenkins runs on ports number 8080. Hence we had to set up another EC2 instance,, however you can change tomcat port number to 8090 in conf/server.xml file under tomcat home, incase you to set up on the same EC2 instance.
 
-1. now application is accessible on port 8090. but tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue
+
+1. now application is accessible on port 8080. but tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue
    ```sh
    #search for context.xml
    find / -name context.xml
