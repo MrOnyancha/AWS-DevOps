@@ -43,7 +43,7 @@ goto tomcat home directory then config folder
    ```sh
        conf/tomcat-user.xml file
    ```
-    # Add below users to conf/tomcat-user.xml file
+   # Add below users to conf/tomcat-user.xml file
    ```sh
 	<role rolename="manager-gui"/>
 	<role rolename="manager-script"/>
