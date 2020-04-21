@@ -35,12 +35,13 @@
    docker run -d --name tomcat-container -p 8080:8080 tomcat:latest
    ```
  1. Incase you have an error, then configure the container
-     ```sh
-   docker exec -it tomcat-container /bin/bash
+   ```sh
+    docker exec -it tomcat-container /bin/bash
    
-   #navigate to webapps.dist folder
-   cd /webapp.dist
+   # navigate to webapps.dist folder
+    cd /webapp.dist
    
-   #copy contents into the webapps folder
-   cp -R * ../webapps
-   ``
+   # copy contents into the webapps folder
+    cp -R * ../webapps
+   ```
+    
