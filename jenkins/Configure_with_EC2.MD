@@ -7,16 +7,17 @@
 
 ## Jobs configurations
 1. Deploy-on-Tomcat-Server
-
+    <br>
   a. Git Repo
     ```sh
    https://github.com/TrevorNathan/hello-world.git
     ```
+    <br>
   b. BUILD: Goals and options
     ```sh
     clean install package
     ```
-
+    <br>
   c. Post-build Actions: Deploy war/ear to a container
     ```sh
     WAR FILE: **/*.war
