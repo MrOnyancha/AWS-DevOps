@@ -4,6 +4,7 @@
 1. GitHub 
 1. Oracle Java SE Development Kit Installer Plugin
 1. Deploy to container
+1. Publish Over SSH
 
 ## Jobs configurations
 1. Deploy-on-Tomcat-Server
