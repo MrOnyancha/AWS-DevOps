@@ -1,1 +1,24 @@
+## Plugins added
+1. Maven Integration
+1. Maven Invoker
+1. GitHub 
+1. Oracle Java SE Development Kit Installer Plugin
+1. Deploy to container
 
+## Jobs configurations
+1. Deploy-on-Tomcat-Server
+
+  a. Git Repo
+    ```sh
+   https://github.com/TrevorNathan/hello-world.git
+    ```
+  b. BUILD: Goals and options
+    ```sh
+    clean install package
+    ```
+
+  c. Post-build Actions: Deploy war/ear to a container
+    ```sh
+    WAR FILE: **/*.war
+    Credentials: deployer
+    ```
