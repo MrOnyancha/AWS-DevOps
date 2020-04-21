@@ -12,7 +12,6 @@
     ```sh
    https://github.com/TrevorNathan/hello-world.git
     ```
-    <br>
   b. BUILD: Goals and options
     ```sh
     clean install package
