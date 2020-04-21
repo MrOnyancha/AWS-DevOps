@@ -12,13 +12,13 @@
     ```sh
    https://github.com/TrevorNathan/hello-world.git
     ```
-   b. BUILD: Goals and options
+  b. BUILD: Goals and options
   <br>
     ```sh
     clean install package
     ```
     <br><br>
-   c. Post-build Actions: Deploy war/ear to a container
+  c. Post-build Actions: Deploy war/ear to a container
   <br>
     ```sh
     WAR FILE: **/*.war
