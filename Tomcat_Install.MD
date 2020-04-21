@@ -41,7 +41,7 @@ After that restart tomcat services to effect these changes
 1. Update users information in the tomcat-users.xml file
 goto tomcat home directory then config folder
    ```sh
-       conf/tomcat-user.xml file
+    cd conf/tomcat-user.xml
    ```
   ### Add below users to conf/tomcat-user.xml file
    ```sh
