@@ -34,7 +34,7 @@
    #then run in detach mode (-d)
    docker run -d --name tomcat-container -p 8080:8080 tomcat:latest
    ```
- 1. Incase you have an error, then configure the container
+1. Incase you have an error, then configure the container
    ```sh
     docker exec -it tomcat-container /bin/bash
    
