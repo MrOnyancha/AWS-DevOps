@@ -44,4 +44,15 @@
    # copy contents into the webapps folder
     cp -R * ../webapps
    ```
+   
+   ### Deploy on Container: Jenkins Job
+1. Add this to the Post-build Action: Exec command
+   ```sh
+   cd /home/dockeradmin;
+   docker build -t jenkins-job-image .;
+   docker run -d --name jenkins-job-container -p 8080:8080 jenkins-job-image;
+   ```
+  NB: The rest of the configurations remain the same as of Deploy-on-Docker Job
+  We just added commands to enable automatic: Var file upload >> Build the image >> Run the container out of the image.
+  
     
