@@ -1,4 +1,4 @@
-# Installing Docker on Amazon EC2 Instance
+# Install Docker on AWS EC2 | Add Dockeradmin | Configure Jenkins-Docker Job
 
 1. Access the EC2 as a root user
    ```sh
