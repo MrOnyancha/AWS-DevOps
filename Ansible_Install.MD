@@ -14,29 +14,37 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    yum install python
    yum install python-pip
    ```
-1. Install ansible using pip check for version
+   #At times python is already installed in the EC2
+   
+1. Install ansible using pip, then check for version
     ```sh
     pip install ansible
    ansible --version
    ```
    
-1. Create a user called ansadmin (on Control node and Managed host)  
+1. Create a user called ansibleadmin (on Control node and Managed host)  
    ```sh
-   useradd ansadmin
-   passwd ansadmin
+   useradd ansibleadmin
+   passwd *********
    ```
 1. Below command grant sudo access to ansadmin user. But we strongly recommended using "visudo" command if you are aware vi or nano editor.  (on Control node and Managed host)
    ```sh
-   echo "ansadmin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+   echo "ansibleadmin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+   ```
+   or Add this: ansibleadmin ALL=(ALL) NOPASSWD: ALL , to last file line.
+   ```sh
+   visudo
    ```
    
-1. Log in as a ansadmin user on master and generate ssh key (on Control node)
+1. Log in as a ansibleadmin user on master and generate ssh key (on Control node)
    ```sh 
    sudo su - ansadmin
    ssh-keygen
    ```
-1. Copy keys onto all ansible managed hosts (on Control node)
+1. Move into .ssh folder, copy keys onto all ansible managed hosts (on Control node)
    ```sh 
+   ls -la
+   cd .ssh
    ssh-copy-id ansadmin@<target-server>
    ```
 
