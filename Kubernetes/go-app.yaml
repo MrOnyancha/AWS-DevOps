@@ -1,0 +1,40 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "deploy-2"
+  namespace: "default"
+  labels:
+    app: "deploy-2"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "deploy-2"
+  template:
+    metadata:
+      labels:
+        app: "deploy-2"
+    spec:
+      containers:
+      - name: "gceme-1"
+        image: "gcr.io/kubernets-262408/gceme:$SHORT_SHA"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "deploy-2-hpa-jzrr"
+  namespace: "default"
+  labels:
+    app: "deploy-2"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "deploy-2"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
