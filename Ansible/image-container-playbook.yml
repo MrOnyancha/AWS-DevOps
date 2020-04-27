@@ -1,0 +1,24 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+          - name: stop current running container
+            command: docker stop playbook-container
+            ignore_errors: yes
+
+          - name: remove the stopped container
+            command: docker rm playbook-container
+            ignore_errors: yes
+
+          - name: remove the docker image
+            command: docker rmi playbook-jjob-image
+            ignore_errors: yes
+
+          - name: build docker image using war file
+            command: docker build -t playbook-jjob-image .
+            args:
+                    chdir: /opt/docker
+
+          - name: create container using playbook-image
+            command: docker run -d --name playbook-container -p 8080:8080 playbook-jjob-image
