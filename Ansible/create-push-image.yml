@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+          - name: create docker image using war file
+            command: docker build -t aws-devops-image:latest .
+            args:
+                    chdir: /opt/docker
+
+          - name: create tag to image
+            command: docker tag aws-devops-image:latest  trevornathan/aws-devops-image:latest
+
+          - name: docker login
+            command: docker login -u trevornathan -p atnathana docker.io
+
+          - name: push image onto dockerHub
+            command: docker push trevornathan/aws-devops-image:latest
+
+          - name: remove docker images from ansible node
+            command: docker rmi aws-devops-image:latest trevornathan/aws-devops-image:latest
+            ignore_errors: yes
