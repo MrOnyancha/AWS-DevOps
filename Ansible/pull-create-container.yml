@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+          - name: stop current running container
+            command: docker stop playbook-container
+            ignore_errors: yes
+
+          - name: remove the stopped container
+            command: docker rm playbook-container
+            ignore_errors: yes
+
+          - name: remove the tagged image
+            command: docker rmi trevornathan/aws-devops-image:latest
+            ignore_errors: yes
+
+           # - name: build docker image using war file
+           #command: docker build -t playbook-jjob-image .
+           #args:
+           #        chdir: /opt/docker
+           
+          - name: pull docker image from dockerhub
+            command: docker pull trevornathan/aws-devops-image:latest
+
+          - name: create container using pulled image
+            command: docker run -d --name playbook-container -p 8080:8080 trevornathan/aws-devops-image:lates
