@@ -55,12 +55,12 @@
 
 1. Create kubernetes cluster definitions on S3 bucket
    ```sh
-   kops create cluster --cloud=aws --zones=ap-south-1b --name=demo.k8s.valaxy.net --dns-zone=valaxy.net --dns private 
+   kops create cluster --cloud=aws --zones=ap-south-1b --name=k8s-demo --dns-zone=mydomain.net --dns private 
     ```
 
 1. Create kubernetes cluser
     ```sh
-    kops update cluster demo.k8s.valaxy.net --yes
+    kops update cluster k8s-demo --yes
     ```
 
 1. Validate your cluster
