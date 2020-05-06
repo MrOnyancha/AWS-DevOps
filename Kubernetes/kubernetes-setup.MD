@@ -45,11 +45,11 @@
 
 1. create an S3 bucket
    ```sh
-    aws s3 mb s3://my-k8s-bucket
+    aws s3 mb s3://demo.k8s.cp.net
    ```
 1. Expose environment variable:
    ```sh
-    export KOPS_STATE_STORE=s3://my-k8s-bucket
+    export KOPS_STATE_STORE=s3://demo.k8s.cp.net
    ```
 
 1. Create sshkeys before creating cluster
