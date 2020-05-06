@@ -2,6 +2,10 @@
 
 
 1. Create Ubuntu EC2 instance
+1. Access Instance as a root user
+   ```sh
+   sudo su -
+   ```
 1. install AWSCLI
    ```sh
     curl https://s3.amazonaws.com/aws-cli/awscli-bundle.zip -o awscli-bundle.zip
