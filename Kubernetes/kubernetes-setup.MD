@@ -64,7 +64,7 @@
 
 1. Create kubernetes cluser
     ```sh
-    kops update cluster k8s-demo --yes
+    kops update cluster demo.k8s.cp.net --yes
     ```
 
 1. Validate your cluster
@@ -83,6 +83,8 @@
     ```
    
 #### Deploying Nginx pods on Kubernetes
+Here we run kubectl commands, next time will be writing YAML files.
+
 1. Deploying Nginx Container
     ```sh
     kubectl run sample-nginx --image=nginx --replicas=2 --port=80
