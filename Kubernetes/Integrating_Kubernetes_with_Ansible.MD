@@ -4,7 +4,7 @@
 
 1. Update hosts file with new group called kubernetes and add kubernetes master in that. 
 
-1. Create ansible playbooks to create **[deployment](https://github.com/TrevorNathan/AWS-DevOps/blob/master/Ansible/kubernetes-deployment-playbook.yml)** and **[services](https://github.com/TrevorNathan/AWS-DevOps/blob/master/Ansible/k8s-service-playbook.yml)** 
+1. Create ansible playbooks to create **[deployment](https://github.com/TrevorNathan/AWS-DevOps/blob/master/Ansible/kubernetes-deployment-playbook.yml)** and **[services](https://github.com/TrevorNathan/AWS-DevOps/blob/master/Ansible/kubernetes-service-playbook.yml)** 
 		
 1.  Check for pods, deployments and services on kubernetes master
     ```sh 
