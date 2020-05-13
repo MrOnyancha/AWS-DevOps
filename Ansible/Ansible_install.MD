@@ -14,7 +14,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    yum install python
    yum install python-pip
    ```
-   #At times python is already installed in the EC2
+   #At times, Python is already installed in the EC2 instance
    
 1. Install ansible using pip, then check for version
     ```sh
