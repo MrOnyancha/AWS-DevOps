@@ -53,7 +53,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    yum install docker
    
    # start docker services 
-   service docker start
+   service docker status
    service docker start 
    
    # add user to docker group 
