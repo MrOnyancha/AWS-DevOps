@@ -24,4 +24,4 @@
             command: docker pull trevornathan/aws-devops-image:latest
 
           - name: create container using pulled image
-            command: docker run -d --name playbook-container -p 8080:8080 trevornathan/aws-devops-image:lates
+            command: docker run -d --name playbook-container -p 8080:8080 trevornathan/aws-devops-image:latest
