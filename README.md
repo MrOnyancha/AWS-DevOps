@@ -1,4 +1,4 @@
-# AWS-DevOps Simple Project
+# AWS-DevOps
 AWS DevOps Project: CI/CD with Git, Jenkins, Ansible, Docker to Kubernetes 
 
 ### Tools:
